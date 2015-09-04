@@ -11,7 +11,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -41,7 +40,7 @@ public class ShowHBoxVbox extends Application {
 	}
 
 	private Node getVBox() {
-		HBox hBox = new HBox(15);
+		VBox hBox = new VBox(15);
 		hBox.setPadding(new Insets(15,15,15,15));
 		hBox.setStyle("-fx-background-color: gold");
 		hBox.getChildren().add(new Button("Computer Science"));
