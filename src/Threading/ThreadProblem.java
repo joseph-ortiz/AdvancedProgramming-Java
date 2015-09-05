@@ -11,16 +11,20 @@ public class ThreadProblem  {
 		Runnable task1 = new Runnable(){
 			@Override
 		    public void run(){
-		    	number+=1;
-		    	System.out.println(number.toString());
+		    	synchronized(number){
+					number+=1;
+			    	System.out.println(number.toString());
+		    	}
 		    }
 		};
 		Runnable task2 = new Runnable(){
 			 
 		    @Override
 		    public void run(){
-		    	number-=1;
-		    	System.out.println(number.toString());
+		    	synchronized(number){
+		    		number-=1;
+			    	System.out.println(number.toString());
+		    	}
 		    }
 		};
 		ExecutorService executor = Executors.newFixedThreadPool(2);
