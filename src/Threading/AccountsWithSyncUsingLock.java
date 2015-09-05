@@ -5,7 +5,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+
 public class AccountsWithSyncUsingLock {
+	
 	private static Account account = new Account();
 	
 	public static void main(String[] args) {
@@ -27,7 +29,7 @@ public class AccountsWithSyncUsingLock {
 		}
 	}
 	
-	public static class Account {
+	private static class Account {
 		private static Lock lock = new ReentrantLock(); //create a lock
 		private int balance = 0;
 		
