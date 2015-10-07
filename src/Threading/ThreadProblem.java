@@ -36,7 +36,7 @@ public class ThreadProblem  {
 			//executor.execute(task2);
 				Thread t1 = new Thread(task1);
 				Thread t2 = new Thread(task2);
-				t1.sta
+				//t1.sta
 			}catch(Exception e){
 				System.out.println("errorwith task :" + e.getMessage());
 			}	

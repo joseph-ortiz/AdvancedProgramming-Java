@@ -8,7 +8,11 @@ import java.io.Serializable;
 */
 public class BankAccount implements Serializable
 {  
-   private int accountNumber;
+   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private int accountNumber;
    private double balance;
 
    /**
