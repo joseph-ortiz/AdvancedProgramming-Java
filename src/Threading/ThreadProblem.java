@@ -13,7 +13,7 @@ public class ThreadProblem  {
 		    public void run(){
 		    	synchronized(number){
 					number+=1;
-			    	System.out.println(number.toString());
+			    	System.out.println("task1: " + number.toString());
 		    	}
 		    }
 		};
@@ -23,15 +23,20 @@ public class ThreadProblem  {
 		    public void run(){
 		    	synchronized(number){
 		    		number-=1;
-			    	System.out.println(number.toString());
+			    	System.out.println("taks 2:  								" + number.toString());
+			  
 		    	}
 		    }
 		};
-		ExecutorService executor = Executors.newFixedThreadPool(2);
+		//ExecutorService executor = Executors.newFixedThreadPool(2);
+		
 		while(true){
 			try{
-			executor.execute(task1);
-			executor.execute(task2);
+			//executor.execute(task1);
+			//executor.execute(task2);
+				Thread t1 = new Thread(task1);
+				Thread t2 = new Thread(task2);
+				t1.sta
 			}catch(Exception e){
 				System.out.println("errorwith task :" + e.getMessage());
 			}	

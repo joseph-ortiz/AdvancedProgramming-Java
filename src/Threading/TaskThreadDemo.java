@@ -14,9 +14,6 @@ public class TaskThreadDemo {
 		Thread thread3 = new Thread(print100);
 		
 		////Starts threads
-		//thread1.run();
-		//thread2.run();
-		//thread3.run();
 		thread1.start();
 		thread2.start();
 		thread3.start();
@@ -26,7 +23,7 @@ public class TaskThreadDemo {
 }
 
 class PrintChar implements Runnable {
-	private char charToPrint; //THe character to print;
+	private char charToPrint; //The character to print;
 	private int times; // THe number of times to repeat
 	
 	public PrintChar(char c, int t)
