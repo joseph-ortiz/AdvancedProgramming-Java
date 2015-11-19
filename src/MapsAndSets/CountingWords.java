@@ -10,27 +10,27 @@ import java.util.*;
 
 public class CountingWords {
 	public static void main(String[] args) {
-		
+
 		HashSet<String> words = OpenWebSite();
-		
+
 		// Create a TreeMap to hold words as key and count as value
 		Map<String, Integer> map = new TreeMap<>();
-		
+
 		for (String w : words) {
 			if (!map.containsKey(w)) {
 				map.put(w, 1);
-				System.out.println(");
+				System.out.println("");
 			}
 			else {
 				int value = map.get(w);
 				map.put(w, value+=1);
 			}
 		}
-		
-	
+
+
 		// Get all entries into a set
 		Set<Map.Entry<String, Integer>> entrySet = map.entrySet();
-		
+
 		// Get key and value from each entry
 		for (Map.Entry<String, Integer> entry: entrySet)
 		System.out.println(entry.getKey() + "\t" + entry.getValue());
