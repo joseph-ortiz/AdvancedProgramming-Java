@@ -1,5 +1,7 @@
 package ObjectIO;
 
+import sun.awt.image.BufferedImageDevice;
+
 import java.io.*;
 
 public class TestObjectInputStream  {
@@ -11,3 +13,4 @@ public class TestObjectInputStream  {
         System.out.println(name + " " + score + " " + date );
     }
 }
+
